@@ -1,0 +1,1 @@
+# mediocorite.github.io
