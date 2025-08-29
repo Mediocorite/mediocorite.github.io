@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "Anzar Ahmad Malik Portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "astro": "^5.13.4"
   }
