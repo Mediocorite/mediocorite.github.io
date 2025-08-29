@@ -1,6 +1,6 @@
 # Anzar Ahmad Malik
 
-Portfolio steps 
-1. Break up the content into components.
-2. Replace each component with data.
-3. Awesome Readme for github.
+Structure 
+1. Base Layout 
+2. index.html
+3. config.json
