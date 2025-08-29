@@ -1,3 +1,18 @@
 {
-    "title": "Anzar Ahmad Malik | Software Engineer"
+    "title": "Anzar Ahmad Malik | Software Engineer",
+    "heroBio": {
+        "name": "Anzar Ahmad Malik",
+        "profession":"Software Engineer",
+        "avatarLocation": "./assets/images/my-avatar.png",
+        "contact": [
+            { "id":"email", "ionIcon": "mail-outline", "title": "Email", "hrefPrefix": "mailto:", "link":"anzar2267@gmail.com" },
+            { "id":"telephone", "ionIcon": "phone-portrait-outline", "title": "Phone", "hrefPrefix": "tel:", "link":"+4407586577503" },
+            { "id":"location", "ionIcon": "location-outline", "title": "Location", "hrefPrefix": "", "link":"https://www.google.com/maps/place/East+Kilbride/@55.7663111,-4.1333241,14z/data=!4m6!3m5!1s0x48883f5d22cde4a5:0x4131dcca61433061!8m2!3d55.765999!4d-4.180213!16zL20vMGJfbXY2?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3Dk" }
+        ], 
+        "social": [
+            { "id": "linkedin",  "href": ""},
+            { "id": "github",  "href": ""}
+
+        ]
+    }
 }

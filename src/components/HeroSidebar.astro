@@ -1,113 +1,62 @@
-    <aside class="sidebar" data-sidebar>
+---
+import config from "@configuration/config.json" assert { type: "json" };
+const { avatarLocation, name, profession, contact, social } = config.heroBio;
+---
 
-      <div class="sidebar-info">
+<aside class="sidebar" data-sidebar>
+  <div class="sidebar-info">
+    <figure class="avatar-box">
+      <img src={avatarLocation} alt={name} width="80" />
+    </figure>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
+    <div class="info-content">
+      <h1 class="name" title={name}>{name}</h1>
 
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+      <p class="title">{profession}</p>
+    </div>
 
-          <p class="title">Web developer</p>
-        </div>
+    <button class="info_more-btn" data-sidebar-btn>
+      <span>Show Contacts</span>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+      <ion-icon name="chevron-down"></ion-icon>
+    </button>
+  </div>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+  <div class="sidebar-info_more">
+    <div class="separator"></div>
 
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
+    <ul class="contacts-list">
+      {
+        contact.map((item) => (
           <li class="contact-item">
-
             <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+              <ion-icon name={item.ionIcon} />
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <p class="contact-title">{item.title}</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+              <a href={item.hrefPrefix + item.link} class="contact-link">
+                {item.link}
+              </a>
             </div>
-
           </li>
+        ))
+      }
+    </ul>
 
-          <li class="contact-item">
+    <div class="separator"></div>
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
+    <ul class="social-list">
+      {
+        social.map((element) => (
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href={element.href} class="social-link">
+              <ion-icon name={"logo-" + element.id} />
             </a>
           </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
+        ))
+      }
+    </ul>
+  </div>
+</aside>
