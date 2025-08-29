@@ -1,5 +1,8 @@
- <article class="contact" data-page="contact">
-
+ ---
+import MySiteLayout from '@layouts/Base.astro';
+import CONFIG from "@configuration/config.json";
+---
+<MySiteLayout title={CONFIG.title} heroBio={CONFIG.heroBio}><article class="contact active" data-page="contact">
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
@@ -36,3 +39,4 @@
         </section>
 
       </article>
+      </MySiteLayout>

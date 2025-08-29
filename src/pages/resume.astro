@@ -1,4 +1,8 @@
- <article class="resume" data-page="resume">
+ ---
+import MySiteLayout from '@layouts/Base.astro';
+import CONFIG from "@configuration/config.json";
+---
+<MySiteLayout title={CONFIG.title} heroBio={CONFIG.heroBio}><article class="resume active" data-page="resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
@@ -182,3 +186,4 @@
         </section>
 
       </article>
+</MySiteLayout>

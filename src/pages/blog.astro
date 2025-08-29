@@ -1,5 +1,9 @@
-
-      <article class="blog" data-page="blog">
+---
+import MySiteLayout from '@layouts/Base.astro';
+import CONFIG from "@configuration/config.json";
+---
+<MySiteLayout title={CONFIG.title} heroBio={CONFIG.heroBio}>
+      <article class="blog active" data-page="blog">
 
         <header>
           <h2 class="h2 article-title">Blog</h2>
@@ -182,3 +186,4 @@
         </section>
 
       </article>
+</MySiteLayout>

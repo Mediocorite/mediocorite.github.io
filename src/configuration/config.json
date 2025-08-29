@@ -14,5 +14,13 @@
             { "id": "github",  "href": ""}
 
         ]
-    }
+    },
+    "aboutme": {
+
+    }, 
+    "resume": {
+
+    }, 
+    "portfolio": {}, "blog": {}, "contact": {}
+
 }

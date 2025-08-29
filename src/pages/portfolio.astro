@@ -1,5 +1,8 @@
- <article class="portfolio" data-page="portfolio">
-
+ ---
+import MySiteLayout from '@layouts/Base.astro';
+import CONFIG from "@configuration/config.json";
+---
+<MySiteLayout title={CONFIG.title} heroBio={CONFIG.heroBio}><article class="portfolio active" data-page="portfolio">
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
@@ -229,3 +232,4 @@
         </section>
 
       </article>
+</MySiteLayout>

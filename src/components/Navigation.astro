@@ -1,27 +1,27 @@
-      <nav class="navbar">
+---
+const currentPath = Astro.url.pathname;
+const navigationLinks = [
+  { id: "about", href: "/about", name: "About" },
+  { id: "resume", href: "/resume", name: "Resume" },
+  { id: "portfolio", href: "/portfolio", name: "Portfolio" },
+  { id: "blog", href: "/blog", name: "Blog" },
+  { id: "contact", href: "/contact", name: "Contact" },
+];
+---
 
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
+<nav class="navbar">
+  <ul class="navbar-list">
+    {
+      navigationLinks.map((nav) => (
+        <li id={nav.id} class="navbar-item">
+          <a
+            class={"navbar-link " + (nav.href == currentPath ? "active" : "")}
+            href={nav.href}
+          >
+            {nav.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
