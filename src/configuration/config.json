@@ -3,7 +3,7 @@
     "heroBio": {
         "name": "Anzar Ahmad Malik",
         "profession":"Software Engineer",
-        "avatarLocation": "./assets/images/my-avatar.jpg",
+        "avatarLocation": "/assets/images/my-avatar.jpg",
         "contact": [
             { "id":"email", "ionIcon": "mail-outline", "title": "Email", "hrefPrefix": "mailto:", "link":"anzar2267@gmail.com" },
             { "id":"telephone", "ionIcon": "phone-portrait-outline", "title": "Phone", "hrefPrefix": "tel:", "link":"+4407586577503" },
