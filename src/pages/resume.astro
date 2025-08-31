@@ -1,189 +1,177 @@
- ---
+---
 import MySiteLayout from '@layouts/Base.astro';
 import CONFIG from "@configuration/config.json";
 ---
-<MySiteLayout title={CONFIG.title} heroBio={CONFIG.heroBio}><article class="resume active" data-page="resume">
 
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
+<MySiteLayout title={CONFIG.title} heroBio={CONFIG.heroBio}>
+  <article class="resume active" data-page="resume">
 
-        <section class="timeline">
+    <header class="resume-header">
+      <h2 class="h2 article-title">Resume</h2>
 
+            <!-- Download Resume Button -->
+      <a 
+        href="/resumes/Anzar-Ahmad-Malik.pdf" 
+        download 
+        class="download-btn"
+      >
+        Download PDF
+      </a>
+    </header>
+
+
+       <!-- Experience -->
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+        <h3 class="h3">Experience</h3>
+      </div>
+
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Full Stack Software Engineer – Healthspan Innovations</h4>
+          <span>Sep 2024 — Feb 2025</span>
+          <p class="timeline-text">
+            Built mobile and web solutions with Flutter, React, and Next.js on AWS.  
+            Designed scalable integrations with Cliniko and Stripe, developed a patient tracking system, and created an LLM-powered feedback portal.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">WordPress Developer & Systems Integrator – Tidy4U</h4>
+          <span>Mar 2024 — Aug 2024</span>
+          <p class="timeline-text">
+            Deployed custom UI/UX on WordPress using HTML, CSS, and PHP.  
+            Managed hosting/DNS with Hostinger & Bluehost, preventing 300+ unauthorized access attempts.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Associate Frontend Developer – SecLogic Inc.</h4>
+          <span>Apr 2021 — Aug 2022</span>
+          <p class="timeline-text">
+            Migrated 50+ React components, reduced bundle size by 38%.  
+            Implemented RBAC with 7 levels, built date-time UX system, added Jest & Cypress testing.  
+            Improved accessibility and performance scores significantly.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Education -->
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <h3 class="h3">Education</h3>
+      </div>
+
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">University of Strathclyde – MSc Advanced Computer Science</h4>
+          <span>Sep 2022 — Sep 2023</span>
+          <p class="timeline-text">
+            Achieved Distinction Merit; served as Class President.  
+            Relevant coursework: Deep Learning, Evolutionary Computing for Finance, Distributed Systems.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Dayananda Sagar University – B.Tech Computer Science & Engineering</h4>
+          <span>Jul 2016 — Jul 2020</span>
+          <p class="timeline-text">
+            Studied Data Structures & Algorithms, Machine Learning, Cloud Architecture, Optimization.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">D.Y. Patil International School – IB Diploma & IGCSE</h4>
+          <span>Jul 2012 — Jul 2016</span>
+          <p class="timeline-text">
+            Subjects included Chemistry HL, Physics HL, Mathematics HL, English, French, and ITGS.  
+            Achieved strong foundation across STEM and humanities.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+ 
+
+    <!-- Skills -->
+    <section class="skill">
+      <h3 class="h3 skills-title">My Skills</h3>
+      <ul class="skills-list content-card">
+
+        <li class="skills-item">
           <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
+            <h5 class="h5">React / Next.js / TypeScript</h5>
+            <data value="90">90%</data>
           </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 90%;"></div>
+          </div>
+        </li>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
+        <li class="skills-item">
           <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
+            <h5 class="h5">Flutter / Dart</h5>
+            <data value="85">85%</data>
           </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 85%;"></div>
+          </div>
+        </li>
 
-          <ol class="timeline-list">
+        <li class="skills-item">
+          <div class="title-wrapper">
+            <h5 class="h5">WordPress / PHP</h5>
+            <data value="75">75%</data>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 75%;"></div>
+          </div>
+        </li>
 
-            <li class="timeline-item">
+        <li class="skills-item">
+          <div class="title-wrapper">
+            <h5 class="h5">Cloud (AWS / GCP)</h5>
+            <data value="80">80%</data>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 80%;"></div>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
+  </article>
 </MySiteLayout>
+
+<style>
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .download-btn {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0.6rem 1.2rem;
+    background: #078080;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .download-btn:hover {
+    background: #056b6b;
+  }
+</style>
